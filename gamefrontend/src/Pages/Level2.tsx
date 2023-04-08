@@ -19,15 +19,15 @@ const Level2 = () => {
 <div className="second-cont" style={{display:"flex",justifyContent:"space-evenly",marginTop:"60px"}}>
   <div>
     <img  width={"150px"} src="https://images.gr-assets.com/hostedimages/1477774625ra/20991777.gif" alt="" />
-    <button>1</button>
-    <button>2</button>
     <button>3</button>
+    <button>4</button>
+    <button>5</button>
   </div>
   <div>
   <img  width={"150px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUalxyL8HmLn7D2e6WDwVteUSi3cXOPtZOw&usqp=CAU" alt="" />
-    <button>1</button>
-    <button>2</button>
     <button>3</button>
+    <button>4</button>
+    <button>5</button>
   </div>
   <div>
 <h2>Message</h2>
