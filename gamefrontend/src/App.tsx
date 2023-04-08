@@ -6,7 +6,7 @@ import Routesfun from './AllRoutes/Routes';
 function App() {
   return (
     <div className="App">
-<Routesfun />
+      <Routesfun />
     </div>
   );
 }
