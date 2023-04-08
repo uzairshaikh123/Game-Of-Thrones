@@ -30,7 +30,7 @@ const Level1 = () => {
 
             <div >
                 <div className="navbar" style={{ height: "50px", width: "100%", display: "flex", justifyItems: "center", justifyContent: "center" }}>
-                    <marquee width="600" style={{ fontSize: "40px" }}>Raja mantri chor sipahi</marquee>
+                    <h2 style={{ fontSize: "25px" }}>Raja mantri chor sipahi</h2>
                 </div>
                 <h2 style={{ textAlign: "center", color: "red" }}>Level 1</h2>
                 <h2  style={{ textAlign: "end", color: "green" ,marginRight:"15px"}}>Queen : 90 Points</h2>
@@ -59,7 +59,7 @@ const Level1 = () => {
 
                         </div>
 
-                        <div style={{ display: "flex", justifyContent: "space-between", marginTop: "15px" ,marginTop:"20px"}}>
+                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px"}}>
                             <span>Raja</span>
                             <span>100</span>
                         </div>
@@ -93,7 +93,7 @@ const Level1 = () => {
 
                     <button onClick={handlestart} className='button2'>Start</button>
                     <Link to="/level2">
-                        <button class="button"><span>Level 2 </span></button>
+                        <button className="button"><span>Level 2 </span></button>
                     </Link>
 
                 </div>
