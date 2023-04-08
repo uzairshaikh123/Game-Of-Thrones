@@ -4,7 +4,7 @@ const Level2 = () => {
   return (
     <div style={{overflowX:"hidden"}}>
 <div className="navbar" style={{ height: "50px", width: "100%", display: "flex", justifyItems: "center", justifyContent: "center" }}>
-                    <marquee width="600" style={{ fontSize: "40px" }}>Raja mantri chor sipahi</marquee>
+                    <h2 style={{ fontSize: "25px" }}>Raja mantri chor sipahi</h2>
                 </div>
 
 <div className="cont-level-2" style={{display:"flex",justifyContent:"space-around",marginTop:"20px"}}>
@@ -35,7 +35,7 @@ const Level2 = () => {
   </div>
   <div>
   <div className="leaderboard" style={{ width: "100%", height: "auto", padding: "20px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
-                        <span>LeaderBoard</span>
+                        <span>ScoreBoard</span>
 
                         <div style={{ display: "flex", justifyContent: "space-between", marginTop: "15px" }}>
                             <span style={{ fontSize: "20px", textDecoration: "bold" }}> <u>Players</u>  </span>
@@ -43,7 +43,7 @@ const Level2 = () => {
 
                         </div>
 
-                        <div style={{ display: "flex", justifyContent: "space-between", marginTop: "15px" ,marginTop:"20px"}}>
+                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px"}}>
                             <span>Raja</span>
                             <span>100</span>
                         </div>
