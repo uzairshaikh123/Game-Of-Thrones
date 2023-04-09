@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom'
 const Level1 = () => {
 
 
-    const [finalarr,setfinalarr] = React.useState([])
+    const [finalarr,setfinalarr] = React.useState([4,4,4,4])
+    const[ result,setresult] = React.useState("")
+ 
 
         const {number,change,finalplayer} = React.useContext(AuthContext)
       
@@ -28,6 +30,7 @@ const Level1 = () => {
       
         }
          setfinalarr(sarr)
+         setresult("Game Starts, You have to find Which one is Thief in remaining two options")
          change([100,60,50,40])
         }
       
@@ -35,13 +38,15 @@ const Level1 = () => {
            
           if(finalarr[i]==3){
            change([100,80,50,20])
+           setresult("Vazir win, but Queen loves Vazir and want divorce to King and dont want this King will remain King,So she use her power and orgainse Level2")
           }else{
+            setresult("Vazir lose, but Queen loves Vazir and want divorce to King and dont want this King will remain King,So she use her power and orgainse Level2")
            change([100,20,50,80])
           }
       
           }
           console.log(finalarr)
-          console.log(number)
+          console.log(result)
     
     
     
@@ -50,7 +55,11 @@ const Level1 = () => {
        }
     
      
-       let img=["https://media.tenor.com/Ggb25MyFi5kAAAAC/crown-royalty.gif","https://images.gr-assets.com/hostedimages/1477774625ra/20991777.gif","https://media2.giphy.com/media/U4w2ZeC6U7cKflZmKf/giphy.gif?cid=6c09b9526db71e99e73e2d548dc8022cbdf9c460ba1b8565&rid=giphy.gif&ct=s","https://media2.giphy.com/media/U4w2ZeC6U7cKflZmKf/giphy.gif?cid=6c09b9526db71e99e73e2d548dc8022cbdf9c460ba1b8565&rid=giphy.gif&ct=s"]
+       let img=["http://localhost:3000/static/media/King.05fb62231c55d84459e3.png",
+                "https://thumbs.dreamstime.com/z/basic-rgb-224500167.jpg",
+                "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg",
+                "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg"
+               ,"https://www.dibustock.com/wp-content/uploads/2022/05/Afro-boy-illustration-with-question-mark-symbol.jpg"]
 
     let arr = [
         {
@@ -72,10 +81,7 @@ const Level1 = () => {
         }
     ]
 
-    const handlestart = () => {
-
-    }
-
+  
 
 
     return (
@@ -95,8 +101,8 @@ const Level1 = () => {
                     <div className="avatars" style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", width: "75%" }}>
                         {arr.map((el)=>{
                             return <div key={el.id} className='card' >
-                            <img width={"150px"} style={{height:"200px"}} src={img[`${el.num}`]} alt="pic" />
-                            <div className='user' onClick={()=>choose(el.id)} >{el.player}</div>
+                            <img width={"160px"} style={{height:"200px"}} src={img[`${el.num}`]} alt="pic" />
+                            <div className='user' onClick={()=>choose(el.id)} style={{cursor:"pointer"}} >{el.player}</div>
 
                         </div>
                         })}

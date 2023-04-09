@@ -28,7 +28,6 @@ const AuthContextProvider = ({children}) => {
     }
 
     const handle=(obj)=>{
-          console.log(obj)
         setfinalplayer(obj)
     }
 

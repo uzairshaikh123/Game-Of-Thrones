@@ -6,24 +6,22 @@ import { useNavigate } from 'react-router-dom'
 const Level2 = () => {
 
   const [ring,setring] = React.useState (Math.floor(Math.random()*4)+2) 
-  const[ result,setresult] = React.useState("")
+  const[ result,setresult] = React.useState("As per Queen commond Vazir got first chance to play")
  
-    const {number,count,setcount} = React.useContext(AuthContext)
+    const {number,change} = React.useContext(AuthContext)
 
    console.log(number)
  
-
-
-   
   let varr = [3,4,5]
     
  
     const select1=(i)=>{
      if(varr[i]+ring==7){
+         change([number[0],number[1]+90,number[2],number[3]])
         setresult("Vazir Win this Game , Now Vazir will become new King And Queen will get divorce to previous King and will marry to New King")
      }else{
-       setcount(count+1)
-       setresult("Total rings is not equal to 7 , You lose this Game ")
+      
+       setresult("Total rings is not equal to 7 , vazir lose this Game ")
      }
    
      setring(Math.floor(Math.random()*4)+2)
@@ -32,17 +30,18 @@ const Level2 = () => {
  
     const select2=(i)=>{
      if(varr[i]+ring==7){
+      change([number[0],number[1],number[2],number[3]+90])
         setresult("Chor Win this Game , Now Chor will become new King And Queen will get divorce to previous King ")
      }else{
-       setcount(count+1)
-       setresult("Total rings is not equal to 7 , You lose this round")
+       
+       setresult("Chor lose this Game , Now Previous King will ramain King and getting marry to new Queen")
      }
    
      setring(Math.floor(Math.random()*4)+2)
     }
     
   
-    console.log(result,count)
+    console.log(result)
 
 
   return (
@@ -56,7 +55,7 @@ const Level2 = () => {
     <img width={"150px"} src="https://cdn.pixabay.com/photo/2023/02/16/19/41/princess-7794649_960_720.jfif" alt="" />
   </div>
   <div  style={{border:"1px solid red"}}>
-    <img width={"150px"} src="https://media.tenor.com/Ggb25MyFi5kAAAAC/crown-royalty.gif" alt="" />
+    <img width={"150px"} src="http://localhost:3000/static/media/King.05fb62231c55d84459e3.png" alt="" />
   </div>
 </div>
 
@@ -73,7 +72,7 @@ const Level2 = () => {
   <img  width={"150px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUalxyL8HmLn7D2e6WDwVteUSi3cXOPtZOw&usqp=CAU" alt="" />
      {
       varr.map((el,i)=>{
-        return <div key={i}  onClick={()=>select2(i)} >{el}</div>
+        return <div key={i} style={{cursor:"pointer"}} onClick={()=>select2(i)} >{el}</div>
       })
      }
   </div>
