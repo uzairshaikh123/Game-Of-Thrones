@@ -126,3 +126,24 @@ width: 100%;
   opacity: 1;
   transition: 0s
 }
+
+.numbers{
+  
+height: 50px;
+width:"70px";
+background-color: #f4511e;
+margin: 10px;
+font-size: 25px;
+text-align: center;
+cursor: pointer;
+}
+.numbers2{
+  
+  height: 50px;
+  width:"70px";
+  background-color: #f4511e;
+  margin: 10px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  }
