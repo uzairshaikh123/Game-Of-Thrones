@@ -72,11 +72,18 @@ const Level1 = () => {
     
      
 
+
        let img=["http://localhost:3000/static/media/King.05fb62231c55d84459e3.png",
                 "https://thumbs.dreamstime.com/z/basic-rgb-224500167.jpg",
                 "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg",
                 "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg"
                ,"https://www.dibustock.com/wp-content/uploads/2022/05/Afro-boy-illustration-with-question-mark-symbol.jpg"]
+
+
+    //    let img=["https://img.freepik.com/premium-vector/king-head-vector-logo-icon_43623-454.jpg?w=2000",
+    //    "https://st2.depositphotos.com/22551796/43072/i/450/depositphotos_430721198-stock-photo-nizam-mulk-abu-ali-hasan.jpg",
+    //    "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6",
+    //    "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6"]
 
 
     let arr = [

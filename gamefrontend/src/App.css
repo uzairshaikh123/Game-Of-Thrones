@@ -160,6 +160,7 @@ font-weight: 700;
   font-weight: 700;
   }
 
+
   .message{
     background-color: rgb(239, 129, 125);
     color:white;
@@ -176,5 +177,10 @@ font-weight: 700;
   .loseborder{
     border:12px solid red;
     border-radius: 10px;
+
+  }
+
+  .winner-cont{
+    background:url("https://i.pinimg.com/originals/f0/f4/84/f0f48450f6e8447740751d57b5becd59.gif")
 
   }
