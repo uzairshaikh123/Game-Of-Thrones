@@ -25,7 +25,9 @@ const Level2 = () => {
     },[])
  
   let varr = [3,4,5]
-    
+  const gotowinnerpag=()=>{
+    setTimeout(()=>navigate("/winner"), 3000)
+  }
  
     const select1=(i)=>{
      if(varr[i]+ring==7){
@@ -33,6 +35,7 @@ const Level2 = () => {
         ref1.current.classList.add("winborder")
          change([number[0],number[1]+90,number[2],number[3]])
         setresult("Wazir Win this Game , Now Wazir will become new King And Queen will get divorce to previous King and will marry to New King")
+          gotowinnerpag()
      }else{
        SoundS1.play()
       ref1.current.classList.add("loseborder")
@@ -42,9 +45,7 @@ const Level2 = () => {
      setring(Math.floor(Math.random()*4)+2)
     }
     
-      const gotowinnerpag=()=>{
-        setTimeout(()=>navigate("/winner"), 3000)
-      }
+     
 
 
     const select2=(i)=>{
