@@ -50,10 +50,10 @@ const Level1 = () => {
        }
     
      
-    //    let img=["https://img.freepik.com/premium-vector/king-head-vector-logo-icon_43623-454.jpg?w=2000",
-    //    "https://st2.depositphotos.com/22551796/43072/i/450/depositphotos_430721198-stock-photo-nizam-mulk-abu-ali-hasan.jpg",
-    //    "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6",
-    //    "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6"]
+       let img=["https://img.freepik.com/premium-vector/king-head-vector-logo-icon_43623-454.jpg?w=2000",
+       "https://st2.depositphotos.com/22551796/43072/i/450/depositphotos_430721198-stock-photo-nizam-mulk-abu-ali-hasan.jpg",
+       "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6",
+       "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6"]
 
     let arr = [
         {
