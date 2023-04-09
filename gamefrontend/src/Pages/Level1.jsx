@@ -59,14 +59,22 @@ const Level1 = () => {
             player:finalplayer.player1
         }, {
             id:1,
+
+            img: "https://img.freepik.com/premium-vector/king-head-vector-logo-icon_43623-454.jpg?w=2000",
             num:finalarr[1],
             player:finalplayer.player2
+
         }, {
             id:2,
             num:finalarr[2],
             player:finalplayer.player3
         }, {
             id:3,
+            img:"https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6",
+            //  "https://media2.giphy.com/media/U4w2ZeC6U7cKflZmKf/giphy.gif?cid=6c09b9526db71e99e73e2d548dc8022cbdf9c460ba1b8565&rid=giphy.gif&ct=s"
+        }, {
+            id:4,
+            img: "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6",
             num:finalarr[3],
             player:finalplayer.player4
         }
@@ -79,7 +87,7 @@ const Level1 = () => {
 
 
     return (
-        <div className='bigcont' style={{ overflowX: "hidden" }}>
+        <div className='bigcont' style={{ overflowX: "hidden"}} >
 
             <div >
                 <div className="navbar" style={{ height: "50px", width: "100%", display: "flex", justifyItems: "center", justifyContent: "center" }}>
@@ -87,7 +95,11 @@ const Level1 = () => {
                 </div>
                 <h2 style={{ textAlign: "center", color: "red" }}>Level 1</h2>
                 <h2  style={{ textAlign: "end", color: "green" ,marginRight:"15px"}}>Queen : 90 Points</h2>
-                <div style={{ display: "flex",justifyContent: "end" ,marginRight:"15px" }}>
+                <div style={{ display: "flex",justifyContent: "space-between" ,marginRight:"15px" }}>
+                    <div></div>
+                    <div style={{border:"1px solid red",width:"40%",height:"100px"}}>
+                        <h3 style={{textAlign:"center"}}>Result</h3>
+                    </div>
                     <img width={"120px"} src="https://cdn.pixabay.com/photo/2023/02/16/19/41/princess-7794649_960_720.jfif" alt="" />
                 </div>
                 <div id="cont" style={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap", marginTop: "50px" }}>
