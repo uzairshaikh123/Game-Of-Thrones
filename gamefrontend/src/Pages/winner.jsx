@@ -1,44 +1,64 @@
 import React from 'react'
 import { AuthContext } from '../Context/AuthContext'
+import { useNavigate } from 'react-router-dom'
+import ending from "../Sound/ending.wav"
+
 const Winner = () => {
-    const {number,count,setcount} = React.useContext(AuthContext)
+    const {number,count,finalplayer,setcount} = React.useContext(AuthContext)
+    const navigate = useNavigate()
+
+   const sound = new Audio(ending)
+   
+   React.useEffect(()=>{
+     sound.play()
+   },[])
+
+    let max = 0
+    let index ;
+
+     for(let i=0;i<number.length;i++){
+        if(max<number[i]){
+            max=number[i]
+            index = i
+        }
+     }
+
+     console.log(max,index)
+
+     let name ;
+
+     if(index==0){
+        name=finalplayer.player1
+     }else if(index==1){
+        name=finalplayer.player2
+     }else if(index==2){
+        name=finalplayer.player3
+     }else if(index==3){
+        name=finalplayer.player4
+     }
+
+    console.log(name)
+
+    const handleclick=()=>{
+        sound.pause()
+        navigate("/")
+    }
+
   return (
     <div className='winner-cont' style={{height:"100vh"}}>
-        <h1 style={{textAlign:"center",fontSize:"40px",color:"red"}}>Results</h1>
+        {/* <h1 style={{textAlign:"center",fontSize:"40px",color:"red"}}>Results</h1> */}
 
-<div style={{height:"auto",width:"50%",margin:"auto",position:"absolute",top:"40%",left:"25%",backgroundColor:"white",boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
-    <h3>Winner To be announced</h3>
-<img width={"100%"} style={{height:"450px"}} src="https://i.pinimg.com/originals/e3/09/e7/e309e77ff7f18cf61b67c2cd2f247dfe.gif" alt="" />
-</div>
-<div className="leaderboard" style={{width:"20%", height: "300px", padding: "20px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",backgroundColor:"white" }}>
-                        <span>ScoreBoard</span>
-
-                        <div style={{ display: "flex", justifyContent: "space-between", marginTop: "15px" }}>
-                            <span style={{ fontSize: "20px", textDecoration: "bold" }}> <u>Players</u>  </span>
-                            <span style={{ fontSize: "20px", textDecoration: "bold" }}> <u>Score</u> </span>
-
-                        </div>
-
-                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px"}}>
-                            <span>Raja</span>
-                            <span>{number[0]}</span>
-                        </div>
-                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
-                            <span>Mantri</span>
-                            <span>{number[1]}</span>
-                        </div>
-                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
-                            <span>Chor</span>
-                            <span>{number[2]}</span>
-                        </div>
-                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
-                            <span>Sipahi</span>
-                            <span>{number[3]}</span>
-                        </div>
+<div style={{height:"auto",width:"50%",margin:"auto",position:"absolute",top:"16%",left:"25%",backgroundColor:"white",boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"}}>
+    <h3  className='lasth3' >{name} is Winner </h3>
+<img width={"100%"} style={{height:"350px"}} src="https://i.pinimg.com/originals/e3/09/e7/e309e77ff7f18cf61b67c2cd2f247dfe.gif" alt="" />
+ 
+<button  className='button3' onClick={handleclick} >New Game</button> 
+ </div>
 
 
-                    </div>
+                  
     </div>
+
   )
 }
 

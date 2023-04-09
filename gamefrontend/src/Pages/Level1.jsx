@@ -80,12 +80,7 @@ const Level1 = () => {
                ,"https://www.dibustock.com/wp-content/uploads/2022/05/Afro-boy-illustration-with-question-mark-symbol.jpg"]
 
 
-    //    let img=["https://img.freepik.com/premium-vector/king-head-vector-logo-icon_43623-454.jpg?w=2000",
-    //    "https://st2.depositphotos.com/22551796/43072/i/450/depositphotos_430721198-stock-photo-nizam-mulk-abu-ali-hasan.jpg",
-    //    "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6",
-    //    "https://us.123rf.com/450wm/kritchanut/kritchanut1410/kritchanut141000122/32814149-businessman-icon-with-question-mark-on-the-face-suspect-concept.jpg?ver=6"]
-
-
+   
     let arr = [
         {
             id:0,
@@ -115,7 +110,7 @@ const Level1 = () => {
 
             <div >
                 <div className="navbar" style={{ height: "60px", width: "100%", display: "flex", justifyItems: "center", justifyContent: "center" }}>
-                    <h2 style={{ fontSize: "30px",fontWeight:"700" }}>Raja mantri chor sipahi</h2>
+                    <h2 style={{ fontSize: "30px",fontWeight:"700" }}>Battle For Throne</h2>
                 </div>
                 <h2 style={{ textAlign: "center", color: "red", fontSize:"30px", fontWeight:"700" }}> <ul style={{color:"rgb(244,87,73)"}}>Level - 1</ul>  </h2>
                 <h2  style={{ textAlign: "end", color: "green" ,fontWeight:"700", marginRight:"15px"}}>Queen : 90 Points</h2>

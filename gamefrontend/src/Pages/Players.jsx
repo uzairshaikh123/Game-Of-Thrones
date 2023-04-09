@@ -57,7 +57,7 @@ const Players = () => {
                 <img className="w-68 rounded-full absolute inset-y-1 inset-x-1" src={King} alt="Background" />
                 <img className="w-68 rounded-full absolute inset-y-1 right-1" src={Queen} alt="Background" />
                 <div className="absolute text-7xl text-rose-950 font-bold top-32 font-mono">
-                    <h1 className="w-screen flex justify-center"><span className="backdrop-blur-sm px-2.5 py-2.5">Player Details</span></h1>
+                    <h1 className="w-screen flex justify-center"><span className="backdrop-blur-sm px-2.5 py-2.5">Player's Name</span></h1>
                     {/* <h1>Raja Mantri</h1> */}
                 </div>
                 <div className="w-screen flex justify-center absolute top-80">

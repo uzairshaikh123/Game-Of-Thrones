@@ -39,7 +39,6 @@ background-color: rgb(234,87,83);
 color: white;
 font-size: larger;
 padding: 6px;
-text-transform: uppercase;
 width: 100%;
 }
 .move{
@@ -182,5 +181,31 @@ font-weight: 700;
 
   .winner-cont{
     background:url("https://i.pinimg.com/originals/f0/f4/84/f0f48450f6e8447740751d57b5becd59.gif")
+
+  }
+  .button3 {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 27px;
+    padding: 5px 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left:35%;
+    margin-bottom: 15px;
+    font-weight: 700;
+  
+  }
+
+  .lasth3{
+    font-size: 30px;
+    font-weight: 700;
+    color:red;
+    width: 45%;
+    margin-left: 30%;
+    margin-top: 10px;
 
   }

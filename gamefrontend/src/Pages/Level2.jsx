@@ -3,6 +3,7 @@ import { AuthContext } from '../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import s1 from "../Sound/s1.mp3"
 import s2 from "../Sound/s2.mp3"
+import s3 from "../Sound/level2.wav"
 
 
 const Level2 = () => {
@@ -13,10 +14,14 @@ const Level2 = () => {
   const[ result,setresult] = React.useState("As per Queen commond Wazir got first chance to play. Queen has rings somewhere between 3-5 and she want exact 7 rings guess and choose the correct option which will make number of rings equal to 7 ")
   const SoundS1 = new Audio(s1)
   const SoundS2 = new Audio(s2)
+  const SoundS3 = new Audio(s3)
 
+  const navigate = useNavigate()
     const {number,change} = React.useContext(AuthContext)
 
-   console.log(number)
+    React.useEffect(()=>{
+      SoundS3.play()
+    },[])
  
   let varr = [3,4,5]
     
@@ -36,7 +41,11 @@ const Level2 = () => {
      setring(Math.floor(Math.random()*4)+2)
     }
     
- 
+      const gotowinnerpag=()=>{
+        setTimeout(()=>navigate("/winner"), 3000)
+      }
+
+
     const select2=(i)=>{
       
      if(varr[i]+ring==7){
@@ -44,11 +53,13 @@ const Level2 = () => {
       ref2.current.classList.add("winborder")
       change([number[0],number[1],number[2],number[3]+90])
         setresult("Chor Win this Game , Now Chor will become new King And Queen will get divorce to previous King ")
+        gotowinnerpag()
      }else{
       SoundS1.play()
       ref2.current.classList.remove("winborder")
       ref2.current.classList.add("loseborder")
        setresult("Chor also lose this Game , Now Previous King will ramain King and getting marry to new Queen")
+       gotowinnerpag()
      }
    
      setring(Math.floor(Math.random()*4)+2)
@@ -61,7 +72,7 @@ const Level2 = () => {
   return (
     <div style={{overflowX:"hidden", backgroundColor: "rgb(207, 204, 204)"}}>
      <div className="navbar" style={{ height: "60px", width: "100%", display: "flex", justifyItems: "center", justifyContent: "center" }}>
-                    <h2 style={{ fontSize: "30px",fontWeight:"700" }}>Raja mantri chor sipahi</h2>
+                    <h2 style={{ fontSize: "30px",fontWeight:"700" }}>Battle For Throne</h2>
      </div>
 
   <div className="cont-level-2" style={{display:"flex",justifyContent:"space-around",marginTop:"20px",height:"auto"}}>
