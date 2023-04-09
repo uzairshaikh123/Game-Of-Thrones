@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import s1 from "../Sound/s1.mp3"
 import s2 from "../Sound/s2.mp3"
 import s3 from "../Sound/level2.wav"
+import King from "../Assets/King.png";
 
 
 const Level2 = () => {
@@ -85,7 +86,7 @@ const Level2 = () => {
 
   </div>
   <div  style={{height:"auto"}}>
-    <img width={"150px"} style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",height:"180px"}} src="http://localhost:3000/static/media/King.05fb62231c55d84459e3.png" alt="" />
+    <img width={"150px"} style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",height:"180px"}} src={King} alt="" />
 
   </div>
 </div>

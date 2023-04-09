@@ -6,6 +6,7 @@ import s1 from "../Sound/s1.mp3"
 import s2 from "../Sound/s2.mp3"
 import s4 from "../Sound/s4.mp3"
 import suffle from "../Sound/suffle.mp3"
+import King from "../Assets/King.png";
 
 const Level1 = () => {
 
@@ -73,7 +74,7 @@ const Level1 = () => {
      
 
 
-       let img=["http://localhost:3000/static/media/King.05fb62231c55d84459e3.png",
+       let img=[King,
                 "https://thumbs.dreamstime.com/z/basic-rgb-224500167.jpg",
                 "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg",
                 "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg"
