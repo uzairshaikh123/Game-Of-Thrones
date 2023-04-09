@@ -5,6 +5,7 @@ import King from "../Assets/King.png";
 import Queen from "../Assets/Queen.png";
 import { AuthContext } from '../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import s3 from "../Sound/s3.mp3"
 
 // interface playerType  {
 //     player1: string,
@@ -12,6 +13,8 @@ import { useNavigate } from 'react-router-dom'
 //     player3: string,
 //     player4: string
 // }
+
+
 
 const Players = () => {
     const [player, setPlayer] = useState({
@@ -21,16 +24,25 @@ const Players = () => {
         player4: "",
     });
 
+    const startsound = new Audio(s3)
+
+    React.useEffect(()=>{
+       startsound.play()
+    },[])
+
     const navigate = useNavigate()
 
     const {finalplayer,handle} = React.useContext(AuthContext)
 
     const handlechange=(e)=>{
+        startsound.pause()
        setPlayer({...player,[e.target.name]:e.target.value})
     }
 
     const handleplayer=(e)=>{
+    
      handle(player)
+     
      navigate("/level1")
 
     }
@@ -68,7 +80,7 @@ const Players = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-screen flex justify-center absolute text-4xl text-rose-950 font-bold bottom-12 font-mono ">
+                <div className="w-screen flex justify-center absolute text-4xl text-rose-950 font-bold bottom-4 font-mono ">
                    <button className="bg-red-300 px-5 rounded-full animate-bounce hover:text-5xl duration-300"  onClick={handleplayer} >Start Game</button>
                 </div>
             </div>

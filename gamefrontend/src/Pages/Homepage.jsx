@@ -2,7 +2,16 @@ import Background from "../Assets/Background.png";
 import King from "../Assets/King.png";
 import Queen from "../Assets/Queen.png";
 
+import React from "react"
+
 const Homepage = () => {
+
+ 
+
+React.useEffect(()=>{
+   
+},[])
+
     return (
         <>
             <div>
