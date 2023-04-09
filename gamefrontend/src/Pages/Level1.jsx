@@ -55,11 +55,13 @@ const Level1 = () => {
        }
     
      
+
        let img=["http://localhost:3000/static/media/King.05fb62231c55d84459e3.png",
                 "https://thumbs.dreamstime.com/z/basic-rgb-224500167.jpg",
                 "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg",
                 "https://thumbs.dreamstime.com/b/d-render-funny-cartoon-burglar-thief-character-holding-question-mark-symbol-d-funny-cartoon-burglar-thief-character-holding-117212723.jpg"
                ,"https://www.dibustock.com/wp-content/uploads/2022/05/Afro-boy-illustration-with-question-mark-symbol.jpg"]
+
 
     let arr = [
         {
@@ -70,6 +72,7 @@ const Level1 = () => {
             id:1,
             num:finalarr[1],
             player:finalplayer.player2
+
         }, {
             id:2,
             num:finalarr[2],
@@ -85,16 +88,21 @@ const Level1 = () => {
 
 
     return (
-        <div className='bigcont' style={{ overflowX: "hidden" }}>
+        <div className='bigcont' style={{ overflowX: "hidden"}} >
 
             <div >
                 <div className="navbar" style={{ height: "50px", width: "100%", display: "flex", justifyItems: "center", justifyContent: "center" }}>
                     <h2 style={{ fontSize: "25px" }}>Raja mantri chor sipahi</h2>
                 </div>
-                <h2 style={{ textAlign: "center", color: "red" }}>Level 1</h2>
+                <h2 style={{ textAlign: "center", color: "red" }}> <ul style={{color:"red"}}>Level 1</ul>  </h2>
                 <h2  style={{ textAlign: "end", color: "green" ,marginRight:"15px"}}>Queen : 90 Points</h2>
-                <div style={{ display: "flex",justifyContent: "end" ,marginRight:"15px" }}>
-                    <img width={"120px"} src="https://cdn.pixabay.com/photo/2023/02/16/19/41/princess-7794649_960_720.jfif" alt="" />
+                <div style={{ display: "flex",justifyContent: "space-between" ,marginRight:"15px" }}>
+                    <div></div>
+                    <div className='message' style={{width:"35%",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
+                        <h3 style={{textAlign:"center",width:"90%",margin:"auto"}}>Result</h3>
+                        <h4 style={{textAlign:"center",maginTop:"30px"}}>hello</h4>
+                    </div>
+                    <img width={"120px"} style={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}} src="https://cdn.pixabay.com/photo/2023/02/16/19/41/princess-7794649_960_720.jfif" alt="" />
                 </div>
                 <div id="cont" style={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap", marginTop: "50px" }}>
 
@@ -110,7 +118,7 @@ const Level1 = () => {
                     </div>
 
                     <div className="leaderboard" style={{ width: "15%", height: "auto", padding: "20px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
-                        <span>LeaderBoard</span>
+                        <span>ScoreBoard</span>
 
                         <div style={{ display: "flex", justifyContent: "space-between", marginTop: "15px" }}>
                             <span style={{ fontSize: "20px", textDecoration: "bold" }}> <u>Players</u>  </span>
