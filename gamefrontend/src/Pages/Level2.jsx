@@ -51,53 +51,44 @@ const Level2 = () => {
                     <h2 style={{ fontSize: "25px" }}>Raja mantri chor sipahi</h2>
                 </div>
 
-<div className="cont-level-2" style={{display:"flex",justifyContent:"space-around",marginTop:"20px"}}>
-  <div  style={{border:"1px solid red"}}>
-    <img width={"150px"} src="https://cdn.pixabay.com/photo/2023/02/16/19/41/princess-7794649_960_720.jfif" alt="" />
+<div className="cont-level-2" style={{display:"flex",justifyContent:"space-around",marginTop:"20px",height:"auto"}}>
+  <div  style={{height:"auto"}}>
+    <img width={"150px"} style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",height:"180px"}} src="https://cdn.pixabay.com/photo/2023/02/16/19/41/princess-7794649_960_720.jfif" alt="" />
   </div>
-  <div className='message' style={{border:"1px solid red",width:"30%"}}>
-<h1 style={{textAlign:"center"}}>Result</h1>
+  <div className='message' style={{width:"35%",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
+<h1 style={{textAlign:"center",width:"90%",margin:"auto"}}>Result</h1>
   </div>
-  <div  style={{border:"1px solid red"}}>
-    <img width={"150px"} style={{height:""}} src="https://img.freepik.com/premium-vector/king-head-vector-logo-icon_43623-454.jpg?w=2000" alt="" />
+  <div  style={{height:"auto"}}>
+    <img width={"150px"} style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",height:"180px"}} src="https://img.freepik.com/premium-vector/king-head-vector-logo-icon_43623-454.jpg?w=2000" alt="" />
   </div>
 </div>
 
-<div className="second-cont" style={{display:"flex",border:"1px solid red",justifyContent:"space-evenly",marginTop:"60px"}}>
-  <div style={{border:"1px solid red"}}>
-    <img  width={"150px"} src="https://images.gr-assets.com/hostedimages/1477774625ra/20991777.gif" alt="" />
+<div className="second-cont" style={{display:"flex",justifyContent:"space-evenly",marginTop:"60px",flexWrap:"wrap"}}>
+  <div style={{height:"auto"}}>
+    <img  style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",height:"180px"}}   width={"150px"} src="https://images.gr-assets.com/hostedimages/1477774625ra/20991777.gif" alt="" />
 
-    <button>3</button>
-    <br />
-    <button>4</button>
-    <br />
-    <button>5</button>
+   
 
      {
       varr.map((el,i)=>{
-        return <div key={i}  onClick={()=>select1(i)} >{el}</div>
+        return <div key={i} className='numbers' onClick={()=>select1(i)} >{el}</div>
       })
      }
 
   </div>
-  <div style={{border:"1px solid red",height:"200px"}} >
-  <img  width={"150px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUalxyL8HmLn7D2e6WDwVteUSi3cXOPtZOw&usqp=CAU" alt="" />
-    <button>3</button>
-    <br />
-    <button>4</button>
-    <br />
-    <button>5</button>
-    <br />
+  <div style={{height:"auto"}} >
+  <img  style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",height:"180px"}}  width={"150px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUalxyL8HmLn7D2e6WDwVteUSi3cXOPtZOw&usqp=CAU" alt="" />
+
 
      {
       varr.map((el,i)=>{
-        return <div key={i}  onClick={()=>select2(i)} >{el}</div>
+        return <div key={i} className='numbers2'  onClick={()=>select2(i)} >{el}</div>
       })
      }
 
   </div>
   <div>
-  <div className="leaderboard" style={{ width: "100%",border:"1px solid red", height: "auto", padding: "20px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
+  <div className="leaderboard" style={{width:"150%", height: "300px", padding: "20px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
                         <span>ScoreBoard</span>
 
                         <div style={{ display: "flex", justifyContent: "space-between", marginTop: "15px" }}>
