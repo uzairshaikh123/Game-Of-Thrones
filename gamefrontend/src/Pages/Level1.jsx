@@ -1,21 +1,74 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../Context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 const Level1 = () => {
 
+
+    const [finalarr,setfinalarr] = React.useState([])
+
+        const {number,change,finalplayer} = React.useContext(AuthContext)
+      
+       const navigate = useNavigate()
+       console.log(finalplayer)
+      
+       let sarr= [0,1,2,3]
+      
+        const suffle=()=>{
+      
+        let cIndex = sarr.length
+      
+        while(cIndex!=0){
+      
+          let rIndex = Math.floor(Math.random()*cIndex)
+          cIndex--
+      
+          [sarr[cIndex],sarr[rIndex]] = [sarr[rIndex],sarr[cIndex]]
+      
+        }
+         setfinalarr(sarr)
+         change([100,60,50,40])
+        }
+      
+          const choose=(i)=>{
+           
+          if(finalarr[i]==3){
+           change([100,80,50,20])
+          }else{
+           change([100,20,50,80])
+          }
+      
+          }
+          console.log(finalarr)
+          console.log(number)
+    
+    
+    
+       const gofun=()=>{
+        navigate("/level2")
+       }
+    
+     
+       let img=["https://media.tenor.com/Ggb25MyFi5kAAAAC/crown-royalty.gif","https://images.gr-assets.com/hostedimages/1477774625ra/20991777.gif","https://media2.giphy.com/media/U4w2ZeC6U7cKflZmKf/giphy.gif?cid=6c09b9526db71e99e73e2d548dc8022cbdf9c460ba1b8565&rid=giphy.gif&ct=s","https://media2.giphy.com/media/U4w2ZeC6U7cKflZmKf/giphy.gif?cid=6c09b9526db71e99e73e2d548dc8022cbdf9c460ba1b8565&rid=giphy.gif&ct=s"]
+
     let arr = [
         {
+            id:0,
+            num:finalarr[0],
+            player:finalplayer.player1
+        }, {
             id:1,
-            img: "https://media.tenor.com/Ggb25MyFi5kAAAAC/crown-royalty.gif"
+            num:finalarr[1],
+            player:finalplayer.player2
         }, {
             id:2,
-            img: "https://images.gr-assets.com/hostedimages/1477774625ra/20991777.gif"
+            num:finalarr[2],
+            player:finalplayer.player3
         }, {
             id:3,
-            img: "https://media2.giphy.com/media/U4w2ZeC6U7cKflZmKf/giphy.gif?cid=6c09b9526db71e99e73e2d548dc8022cbdf9c460ba1b8565&rid=giphy.gif&ct=s"
-        }, {
-            id:4,
-            img: "https://media2.giphy.com/media/U4w2ZeC6U7cKflZmKf/giphy.gif?cid=6c09b9526db71e99e73e2d548dc8022cbdf9c460ba1b8565&rid=giphy.gif&ct=s"
+            num:finalarr[3],
+            player:finalplayer.player4
         }
     ]
 
@@ -42,8 +95,8 @@ const Level1 = () => {
                     <div className="avatars" style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", width: "75%" }}>
                         {arr.map((el)=>{
                             return <div key={el.id} className='card' >
-                            <img width={"150px"} style={{height:"200px"}} src={el.img} alt="" />
-                            <div className='user'>User{el.id}</div>
+                            <img width={"150px"} style={{height:"200px"}} src={img[`${el.num}`]} alt="pic" />
+                            <div className='user' onClick={()=>choose(el.id)} >{el.player}</div>
 
                         </div>
                         })}
@@ -61,19 +114,19 @@ const Level1 = () => {
 
                         <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px"}}>
                             <span>Raja</span>
-                            <span>100</span>
+                            <span>{number[0]}</span>
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
                             <span>Mantri</span>
-                            <span>60</span>
-                        </div>
-                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
-                            <span>Chor</span>
-                            <span>30</span>
+                            <span>{number[1]}</span>
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
                             <span>Sipahi</span>
-                            <span>40</span>
+                            <span>{number[2]}</span>
+                        </div>
+                        <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
+                            <span>Chor</span>
+                            <span>{number[3]}</span>
                         </div>
 
 
@@ -91,7 +144,7 @@ const Level1 = () => {
 
                 <div className="cont2" style={{}}>
 
-                    <button onClick={handlestart} className='button2'>Start</button>
+                    <button onClick={suffle} className='button2'>Start</button>
                     <Link to="/level2">
                         <button className="button"><span>Level 2 </span></button>
                     </Link>
