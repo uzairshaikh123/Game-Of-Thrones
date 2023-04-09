@@ -1,6 +1,50 @@
 import React from 'react'
+import { AuthContext } from '../Context/AuthContext'
+import { useNavigate } from 'react-router-dom'
+
 
 const Level2 = () => {
+
+  const [ring,setring] = React.useState (Math.floor(Math.random()*4)+2) 
+  const[ result,setresult] = React.useState("")
+ 
+    const {number,count,setcount} = React.useContext(AuthContext)
+
+   console.log(number)
+ 
+
+
+   
+  let varr = [3,4,5]
+    
+ 
+    const select1=(i)=>{
+     if(varr[i]+ring==7){
+        setresult("Vazir Win this Game , Now Vazir will become new King And Queen will get divorce to previous King and will marry to New King")
+     }else{
+       setcount(count+1)
+       setresult("Total rings is not equal to 7 , You lose this Game ")
+     }
+   
+     setring(Math.floor(Math.random()*4)+2)
+    }
+    
+ 
+    const select2=(i)=>{
+     if(varr[i]+ring==7){
+        setresult("Chor Win this Game , Now Chor will become new King And Queen will get divorce to previous King ")
+     }else{
+       setcount(count+1)
+       setresult("Total rings is not equal to 7 , You lose this round")
+     }
+   
+     setring(Math.floor(Math.random()*4)+2)
+    }
+    
+  
+    console.log(result,count)
+
+
   return (
     <div style={{overflowX:"hidden"}}>
 <div className="navbar" style={{ height: "50px", width: "100%", display: "flex", justifyItems: "center", justifyContent: "center" }}>
@@ -22,11 +66,19 @@ const Level2 = () => {
 <div className="second-cont" style={{display:"flex",border:"1px solid red",justifyContent:"space-evenly",marginTop:"60px"}}>
   <div style={{border:"1px solid red"}}>
     <img  width={"150px"} src="https://images.gr-assets.com/hostedimages/1477774625ra/20991777.gif" alt="" />
+
     <button>3</button>
     <br />
     <button>4</button>
     <br />
     <button>5</button>
+
+     {
+      varr.map((el,i)=>{
+        return <div key={i}  onClick={()=>select1(i)} >{el}</div>
+      })
+     }
+
   </div>
   <div style={{border:"1px solid red",height:"200px"}} >
   <img  width={"150px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUalxyL8HmLn7D2e6WDwVteUSi3cXOPtZOw&usqp=CAU" alt="" />
@@ -36,6 +88,13 @@ const Level2 = () => {
     <br />
     <button>5</button>
     <br />
+
+     {
+      varr.map((el,i)=>{
+        return <div key={i}  onClick={()=>select2(i)} >{el}</div>
+      })
+     }
+
   </div>
   <div>
   <div className="leaderboard" style={{ width: "100%",border:"1px solid red", height: "auto", padding: "20px", boxShadow: "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
@@ -49,19 +108,19 @@ const Level2 = () => {
 
                         <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px"}}>
                             <span>Raja</span>
-                            <span>100</span>
+                            <span>{number[0]}</span>
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
                             <span>Mantri</span>
-                            <span>60</span>
+                            <span>{number[1]}</span>
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
                             <span>Chor</span>
-                            <span>30</span>
+                            <span>{number[2]}</span>
                         </div>
                         <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px" }}>
                             <span>Sipahi</span>
-                            <span>40</span>
+                            <span>{number[3]}</span>
                         </div>
 
 
