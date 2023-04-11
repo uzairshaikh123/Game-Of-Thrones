@@ -1,6 +1,6 @@
 # Game-Crafters
 
-### Constributers = Aman Kumar Maurya , Neerav khatri ,Uzair
+### Contributers = Aman Kumar Maurya , Neerav khatri ,Uzair
 
 ### Deployed Link https://gamefrontend-uzairmd073-gmailcom.vercel.app/
 
