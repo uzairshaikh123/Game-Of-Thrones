@@ -10,6 +10,7 @@ import King from "../Assets/King.png";
 const Level2 = () => {
 
   const [ring,setring] = React.useState (Math.floor(Math.random()*4)+2) 
+  const [count2,setcount2] = React.useState(0)
   const ref1 = React.useRef(null)
   const ref2 = React.useRef(null)
   const[ result,setresult] = React.useState("As per Queen commond Wazir got first chance to play. Queen has rings somewhere between 3-5 and she want exact 7 rings guess and choose the correct option which will make number of rings equal to 7 ")
@@ -31,12 +32,14 @@ const Level2 = () => {
  
     const select1=(i)=>{
      if(varr[i]+ring==7){
+      setcount2(count2+1)
         SoundS2.play()
         ref1.current.classList.add("winborder")
          change([number[0],number[1]+90,number[2],number[3]])
         setresult("Wazir Win this Game , Now Wazir will become new King And Queen will get divorce to previous King and will marry to New King")
           gotowinnerpag()
      }else{
+      setcount2(count2+1)
        SoundS1.play()
       ref1.current.classList.add("loseborder")
        setresult("Total rings is not equal to 7 , Wazir lose this Game Now turn goes to next player ")
@@ -108,14 +111,11 @@ const Level2 = () => {
   <div  style={{height:"auto"}} >
   <img  ref={ref2} style={{boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",height:"180px"}}  width={"150px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUalxyL8HmLn7D2e6WDwVteUSi3cXOPtZOw&usqp=CAU" alt="" />
 
-
+  
      {
       varr.map((el,i)=>{
 
-        return <div key={i} className='numbers2' style={{cursor:"pointer"}} onClick={()=>select2(i)} >{el}</div>
-
-  
-
+        return <button  key={i} className='numbers2' style={{cursor:"pointer"}} onClick={()=>select2(i)} >{el}</button>
       })
      }
 
